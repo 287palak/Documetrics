@@ -1,0 +1,89 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOAD RESULT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../static/css/Page-4.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../static/js/jquery-1.9.1.min.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../static/js/nicepage.js" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</head>
+
+<body bgcolor: "black">
+    <background-color:blue>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-dark" style="background-color: #7a2048;">
+            <div class="container">
+
+            </div>
+        </nav>
+        <!-- body -->
+        <div class="container">
+            <br>
+            <h3 class="display-11" align="center">UPLOAD RESULT</h3>
+            <br>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <br>
+                <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-2">
+                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                        <h2 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-default u-text-2">Enter your Student ID</h2>
+                        <div class="input-group input-group-lg">
+                            {{ form.student_id }}
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                        <h2 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-3">Enter name of examination</h2>
+                        <div class="input-group input-group-lg">
+                            {{ form.exam }}
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-2">
+                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                        <h2 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-default u-text-2">Enter Result</h2>
+                        <div class="input-group input-group-lg">
+                            {{ form.result }}
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                        <h2 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-3">Enter name of examination</h2>
+
+                        <div class="input-group input-group-lg">
+                            {{ form.certificate }}
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <input type="submit" value="Print Details" class="btn btn-outline-secondary">
+            </form>
+            {% if upload %}
+            <br><br>
+            <div class="row">
+                <h4 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-3">Result Successfully Uploaded</h4>
+            </div>
+            {% endif %}
+            <hr>
+    </background-color:blue>
+</body>
+
+</html>
