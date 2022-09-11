@@ -2,6 +2,8 @@
 
 This is a Simple Student Identification System Developed for Microsoft Engage 2022 while Learning Django.
 
+Thousands of people submit fake marksheets and degrees all across the country, and there is no means to check the authenticity of these documents. This project is an end-to-end credential verification system that helps academic/business organisations verify marksheets/degrees/certificates. This system uses the technology of face authentication to map students and teachers to unique IDs linked to their government-issued IDs and every student can use face recognition to access their results and certificates from anywhere. The documents uploaded on this website are uploaded from verified and authentic sources. To increase security technologies like geofencing and time duration monitor can also be added. Further to reduce the risk of forging we can upload these documents over blockchain for lifetime access. All the features in this project are registration, authentication using face recognition and documentation updating feature. This project uses a model dataset which includes the government-issued IDs and the details associated with them. The photos from this data are compared to the input images using python language’s face_recognition library and authentication of the person is done. Further the backend of the website is created using Django framework and HTML,CSS and JavaScript are used for the frontend of the website. 
+
 ## Project Video: 
 
 https://drive.google.com/file/d/1Td3LYkmLwWm-ifSnFqJ9uz7W63p2Tbj8/view?usp=sharing
